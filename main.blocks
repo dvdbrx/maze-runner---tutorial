@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="ApVY4Lr!X%LBdbw[6V?+">Player</variable><variable type="KIND_SpriteKind" id="LmAP0p_CTn78P;Wy;rmv">Projectile</variable><variable type="KIND_SpriteKind" id="R6W4r~$y-5i#Vgg{yn41">Food</variable><variable type="KIND_SpriteKind" id=":C24l_ezGwSo91B}1Fsk">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="/q@=~w9*y|D-5q.cjd{O">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable><variable id="y~cGI8pnyn)rySsGkVF@">mySprite</variable><variable id="|?IV?R6s_gE`obGmcjBY">Ghost</variable><variable id="h6@LpBkhH?K_C[-@a=dS">mySprite2</variable><variable id="{b;pUKIg#~(Xd}=%3[Vi">myEnemy</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">30</field></shadow></value><next><block type="variables_set"><field name="VAR" id="|?IV?R6s_gE`obGmcjBY">Ghost</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . f f f f . . . . . . . . . . 
+. . . . . . . . f f 1 1 1 1 f f . . . . . . . . 
+. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
+. . . . . . . f 1 1 1 1 1 1 1 1 f . . . . . . . 
+. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
+. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
+. . . . . . f d d d 1 1 1 1 d d d f . . . . . . 
+. . . . . . f b d b f d d f b d b f . . . . . . 
+. . . . . . f c d c f 1 1 f c d c f . . . . . . 
+. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
+. . . . . . f f f c d b 1 b d f f f f . . . . . 
+. . . . f c 1 1 1 c b f b f c 1 1 1 c f . . . . 
+. . . . f 1 b 1 b 1 f f f f 1 b 1 b 1 f . . . . 
+. . . . f b f b f f f f f f b f b f b f . . . . 
+. . . . . . . . . f f f f f f . . . . . . . . . 
+. . . . . . . . . . . f f f . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="|?IV?R6s_gE`obGmcjBY">Ghost</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">141</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">105</field></shadow></value><next><block type="variables_set"><field name="VAR" id="y~cGI8pnyn)rySsGkVF@">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . 8 8 8 5 . . . . 
+. . . . . 8 8 8 8 8 5 . . . 
+. . . . 8 5 8 8 5 8 8 5 . . 
+. . . . 8 8 8 8 8 8 8 5 . . 
+. . . . 8 5 8 8 5 8 8 5 . . 
+. . . . 8 8 5 5 8 8 8 5 . . 
+. . . . . 8 8 8 8 8 5 . . . 
+. . . . . . 8 8 8 5 . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="y~cGI8pnyn)rySsGkVF@">mySprite</field></block></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`10001000010b0b0b0b0b0b0b0b0b0b0b0b0b10080b070a070807090a090b070a07080a070b0b0b0b0b080f0b0b0b0b0b0b1008030b080b0b0b080b0b0a0b080b090b090b0b07080907070b0807080807080b090b0b0a0b0b0b0b0b0b0b0b0b0b0b0b070b0b070b07080708070b0708070b0a080b0e0b0b0b10080f0b0b070f0b0b0a080b08080a070b090b080b080b070b070a0b0b0b0b0b0b070b070b070b0a0b0a0f0b0b0b0b0708090b080b080b080b070b070709070a0f0b0b0a0b0b0b070b0b0b090f0b0b070b0b080709070b08090a070a0b070b080b0b0b0b0b0b0b0b0b0b080b0b0a0b070b0708070b080a070b0a070b0e070b0b0b0b0b0a0b0b070b0b0b0b11`,
+            img`
+. . . . . . . . . . . . . . . 2 
+. 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
+. . . . . 2 . . . . . . . . 2 . 
+. 2 . . . 2 . . 2 . 2 . 2 . 2 . 
+. 2 2 2 2 2 . 2 2 2 2 2 2 . 2 . 
+. 2 . . . . . . . . . . . . 2 . 
+. 2 . 2 2 2 2 2 . 2 2 2 . . 2 . 
+. . . . . 2 . . . 2 . . . . 2 . 
+. 2 2 2 . 2 . 2 . 2 . 2 . 2 2 . 
+. . . . . 2 . 2 . 2 . 2 . 2 . . 
+. . . 2 2 2 . 2 . 2 . 2 . 2 . 2 
+2 2 2 2 . . . 2 . . . 2 . . . 2 
+. . . 2 . . 2 2 2 2 . 2 2 2 2 2 
+. 2 . 2 . . . . . . . . . . 2 . 
+. 2 . 2 . 2 2 2 . 2 2 2 . 2 2 . 
+. 2 . . . . . 2 . . 2 . . . . . 
+`,
+            [myTiles.tile0,sprites.dungeon.floorLight2,sprites.dungeon.floorLight4,sprites.dungeon.stairLadder,sprites.dungeon.floorDark2,sprites.dungeon.stairWest,sprites.dungeon.stairEast,sprites.castle.tileDarkGrass2,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass1,sprites.builtin.forestTiles0,sprites.castle.tilePath5,sprites.castle.tilePath2,sprites.castle.tilePath4,sprites.castle.tilePath7,sprites.castle.tilePath1,sprites.castle.tilePath3,sprites.castle.tilePath9],
+            TileScale.Sixteen
+        )</field><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="y~cGI8pnyn)rySsGkVF@">mySprite</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.floorLight2</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="y~cGI8pnyn)rySsGkVF@">mySprite</field></block></value><next><block type="spriteFollowOtherSprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="|?IV?R6s_gE`obGmcjBY">Ghost</field></block></value><value name="target"><block type="variables_get"><field name="VAR" id="y~cGI8pnyn)rySsGkVF@">mySprite</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spriteshittile" x="650" y="10"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.stairLadder</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose"><field name="win">true</field></shadow></value></block></statement></block><block type="spritesoverlap" x="650" y="190"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Enemy</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.dissolve</field><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></statement></block></xml>
